@@ -4,7 +4,7 @@ use std::io::{self, Read, Seek, SeekFrom, Write};
 fn main() -> io::Result<()> {
     let chunk_size = 1024 * 1024 * 80;
     let overlap_ratio: f64 = 0.1; // Overlap percentage
-    let mut input_file = File::open(r"C:\Bears_Tool\Programming\Binary_File_Splitter\QAR.DAT")?;
+    let mut input_file = File::open(r"C:\Binary_File_Splitter\QAR.DAT")?;
     let input_size = input_file.metadata()?.len();
     let mut buffer = vec![0; chunk_size];
     let mut count = 0;
